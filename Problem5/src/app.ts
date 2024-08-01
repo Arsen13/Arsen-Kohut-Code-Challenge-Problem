@@ -1,0 +1,19 @@
+const express = require('express');
+const bodyParser = require('body-parser');
+const todoRoutes = require('./routes');
+
+const app = express();
+const port = 3000;
+
+app.use(bodyParser.json());
+app.use(
+    bodyParser.urlencoded({
+        extended: true,
+    })
+);
+
+app.use('/', todoRoutes);
+
+app.listen(port, () => {
+    console.log(`server is listening on http://localhost:${port}....`);  
+});
