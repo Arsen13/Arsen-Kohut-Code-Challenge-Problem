@@ -1,6 +1,6 @@
 const express = require('express');
 const bodyParser = require('body-parser');
-const todoRoutes = require('./routes');
+import todoRoutes from './routes';
 
 const app = express();
 const port = 3000;
