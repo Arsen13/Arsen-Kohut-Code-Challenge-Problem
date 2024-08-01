@@ -18,7 +18,8 @@ function sum_to_n_b(n: number): number {
 	return n + (sum_to_n_b(n - 1));
 }
 
+// Time Complexity is O(1)
+// Space Complexity is O(1)
 function sum_to_n_c(n: number): number {
-	// your code here
-	return n;
+	return (n * (n + 1)) / 2;
 }
